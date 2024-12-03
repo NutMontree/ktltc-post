@@ -1,7 +1,5 @@
 import React from "react";
 import UserCard from "../(components)/UserCard";
-import { faHome, faTicket } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
 
 const getUsers = async () => {
   try {
@@ -34,21 +32,9 @@ const User = async () => {
 
   return (
     <>
-      <nav className="flex justify-between bg-nav p-4">
-        <div className="flex items-center space-x-4">
-          <Link href="/">
-            <div icon={faHome} className="icon">
-              Home
-            </div>
-          </Link>
-          <Link href="/UserPage/new">
-            <div icon={faTicket} className="icon">
-              เพิ่มข้อมูล
-            </div>
-          </Link>
-        </div>
+      <nav className=" bg-nav p-4">
         <div>
-          <p className=" text-default-text">Ktltc Post</p>
+          <div className="flex justify-end text-default-text">Ktltc Post</div>
         </div>
       </nav>
       <div className="p-5 flex-grow overflow-y-auto bg-page text-default-text">
